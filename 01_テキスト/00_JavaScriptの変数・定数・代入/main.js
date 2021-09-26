@@ -1,5 +1,5 @@
 // * let キーワードを使って、hensu という名前の変数を宣言する
-let hensu
+let hensu = 0
 
 // 変数には値を代入（割り当て）できる
 hensu = 42

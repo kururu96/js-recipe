@@ -12,7 +12,7 @@ for (const button of buttons.children) {
 
 // 要素を変更する - textContent
 const elementTextContent = document.getElementById("element-textContent")
-elementTextContent.textContent = "こんばんは"
+elementTextContent.textContent = "おはよう"
 
 // 要素を変更する - style
 const elementStyle = document.getElementById("element-style")
@@ -37,7 +37,3 @@ const elementPrepend = document.getElementById("element-prepend")
 const div2 = document.createElement("div")
 div2.textContent = "おはよう"
 elementPrepend.prepend(div2)
-
-// 要素を削除する - remove
-const elementRemove = document.getElementById("element-remove")
-elementRemove.remove()

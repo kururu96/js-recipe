@@ -37,3 +37,7 @@ const elementPrepend = document.getElementById("element-prepend")
 const div2 = document.createElement("div")
 div2.textContent = "おはよう"
 elementPrepend.prepend(div2)
+
+// 要素を削除する - remove
+const elementRemove = document.getElementById("element-remove")
+elementRemove.remove()

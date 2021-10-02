@@ -1,8 +1,17 @@
 const display = document.getElementById("display")
-const plusButton = document.getElementById("plus-button")
+const button = document.getElementById("button")
+
 let count = 0
-plusButton.onclick = function() {
+
+const countUp = function() {
+  // count を更新
   count += 1
-  // count を表示
-  display.textContent = count
+  // count を秒単位にして表示
+  display.textContent = count / 100
+}
+
+button.onclick = function() {
+  // 10ms ごとに countUp を実行するように登録する
+  setInterval(countUp, 10)
+  button.textContent = "stop"
 }

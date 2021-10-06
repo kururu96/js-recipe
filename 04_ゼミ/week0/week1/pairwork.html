@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <h1>10月の英語のつづりは何でしょう？</h1>
+    <button id="button1">October</button>
+    <button id="button2">Actorber</button>
+    <button id="button3">Octorver</button>
+    <div id="display"></div>
+    <script>
+      const Button1 = document.getElementById("button1")
+      const Button2 = document.getElementById("button2")
+      const Button3 = document.getElementById("button3")
+      const Display = document.getElementById("display")
+      // Button1.onclick = function () {};
+      Button1.onclick = function() {
+        Display.textContent = "正解"
+      }
+      Button2.onclick = function() {
+        Display.textContent = "不正解"
+      }
+      Button3.onclick = function() {
+        Display.textContent = "不正解"
+      }
+    </script>
+  </body>
+</html>

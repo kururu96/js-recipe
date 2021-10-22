@@ -10,10 +10,12 @@
     <h2>配列を使ったメモアプリ</h2>
     <input type="text" id="memo-input" />
     <button id="add-button">保存</button>
+    <button id="sort-button">並び替える</button>
     <div id="memo-container"></div>
     <script>
       const memoInput = document.getElementById("memo-input")
       const addButton = document.getElementById("add-button")
+      const sortButton = document.getElementById("sort-button")
       const memoContainer = document.getElementById("memo-container")
       // 保存したメモを管理する配列をグローバルスコープで宣言する。
       let memos = []
@@ -25,14 +27,22 @@
         console.log(memos)
 
         memoContainer.textContent = ""
+        //取得した内容をDOMに反映する
+        roop()
+      }
+      sortButton.onclick = function() {
+        memos.sort()
+        memoContainer.textContent = ""
+        roop()
+      }
 
+      function roop() {
         for (let i = 0; i <= memos.length; i++) {
           const text = memos[i]
           const div = document.createElement("div")
           div.textContent = text
           memoContainer.append(div)
         }
-        // 取得した内容をDOMに反映する
       }
     </script>
   </body>

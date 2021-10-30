@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Vueカウンター</title>
+    <title>Vue カウンター</title>
   </head>
   <body>
     <div id="app">
+      <h1>
+        Vueカウンター
+      </h1>
       <div>
-        count:{{count}}
+        🔥{{ check }}🔥
       </div>
-      <div>
-        <button v-on:click="countUp">+1</button>
-      </div>
+      <button v-on:click="plus">+1</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
@@ -24,9 +24,21 @@
           count: 0,
         },
         methods: {
-          countUp: function() {
+          plus: function() {
             this.count += 1
           },
+        },
+        computed: {
+          check: function() {
+            if (this.count % 3 === 0) {
+              return this.count + "!!!"
+            } else {
+              return this.count
+            }
+          },
+        },
+        created: function() {
+          this.count = 100
         },
       })
     </script>
